@@ -33,3 +33,4 @@ Execute düyməsinə basdım.- Swagger-də 201 OK yaradıldı.
 }
 Simplifai-da refresh etdim.-Simplifai-da “My Application” draft application yaradılmadı.BUG
 Select applications where created_at '2026-05-03T14:49:59'; Supabase-də həmin tətbiqə aid məlumat tapılmadı. BUG
+3.Simplifai frontend-də öz hesabımdan çıxdım(logout).
