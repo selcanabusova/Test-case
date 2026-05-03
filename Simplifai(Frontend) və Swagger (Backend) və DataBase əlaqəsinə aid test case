@@ -1,0 +1,35 @@
+1.Title:Simplifai-da Get apı vasitəsilə yaradılan draft application-ları görmək.
+Description: Get API vasitəsilə yaratdığımız application-ları vizual olaraq görə bilmək.
+Pre-conditions:
+1.https://smplifai-backend.vercel.app/api-docs/#/ saytına keçid etdim.
+2.https://smplifai-frontend.vercel.app/ bu saytda qeydiyyatdan keçdim Və “F12” düyməsi vasitəsilə “devtools” açdım. “Applications” bölməsindən token-i götürdüm.
+3.Swagger-də “authorize”-dan keçdim.
+Test Case Steps
+Swagger-də ”Applications” bölməsində Get sorğusuna keçid etdim.”Try it out” klik etdim.Execute düyməsinə basdım.Swagger-də 200 OK yaradıldı.
+Simplifai-a keçid etdim və səhifəni refresh etdim.Yaradılan application-lar simplifai-da vizual olaraq görünür.
+Supabase-ə keçid etdim. "Select applications;" kodunu yazdım və yaradılan application-lar cədvəldə göründü.
+2.Title:Simplifai-da Post apı vasitəsilə draft application yaratmaq.
+Description:POST Apı vasitəsilə yeni tətbiq yaradılmağını yoxlamaq.
+Pre-conditions:
+1.https://smplifai-backend.vercel.app/api-docs/#/ saytına keçid etdim.
+2.https://smplifai-frontend.vercel.app/ bu saytda qeydiyyatdan keçdim Və “F12” düyməsi vasitəsilə “devtools” açdım. “Applications” bölməsindən token-i götürdüm.
+3.Swagger-də “autorize”-dan keçdim.
+Test Case Steps
+Swagger-də ”Applications” bölməsində Post sorğusuna keçid etdim.
+”Try it out” klik etdim.
+”Type” hissəsinə “My Application” yazdım.
+Execute düyməsinə basdım.- Swagger-də 201 OK yaradıldı.
+{
+  "id": "f2bce57a-44f1-474a-aeaf-e1914111d3cd",
+  "user_id": "2ca021f4-c85d-418f-89e4-4aa38605f9f2",
+  "type": "My Application",
+  "email": null,
+  "phone": null,
+  "passport_data": null,
+  "file_url": null,
+  "status": "DRAFT",
+  "created_at": "2026-05-03T14:49:59.895442+00:00",
+  "updated_at": "2026-05-03T14:49:59.895442+00:00"
+}
+Simplifai-da refresh etdim.-Simplifai-da “My Application” draft application yaradılmadı.BUG
+Select applications where created_at '2026-05-03T14:49:59'; Supabase-də həmin tətbiqə aid məlumat tapılmadı. BUG
