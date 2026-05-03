@@ -1,0 +1,22 @@
+Bug ID:1
+Başlıq:Swagger-də Post apı vasitəsilə yaratdığım "My application" adlı tətbiq Simplifai-da frontend-də və Supabase SQL-də tapılmadı. 
+Təsvir: Swagger-də Post/Applications etdim. Type hissəsinə "My application" yazdım.201 Ok gəldi. Simplifai frontend-də yaratdığım tətbiqi görmək üçün səhifəni yenilədim. Lakin bu adda tətbiq yaradılmamışdı.Həmçinin Supabase-ə keçid etdim. Və tarix vasitəsilə tətbiqi tapmaq istədim.Lakin ekranda bu göründü:Failed to run sql query: ERROR:  42703: column "applications" does not exist".
+Addımlar:
+Swagger-də ”Applications” bölməsində Post sorğusuna keçid etdim.
+”Try it out” klik etdim.
+”Type” hissəsinə “My Application” yazdım.
+Execute düyməsinə basdım.- Swagger-də 201 OK yaradıldı.
+{
+  "id": "f2bce57a-44f1-474a-aeaf-e1914111d3cd",
+  "user_id": "2ca021f4-c85d-418f-89e4-4aa38605f9f2",
+  "type": "My Application",
+  "email": null,
+  "phone": null,
+  "passport_data": null,
+  "file_url": null,
+  "status": "DRAFT",
+  "created_at": "2026-05-03T14:49:59.895442+00:00",
+  "updated_at": "2026-05-03T14:49:59.895442+00:00"
+}
+Simplifai-da refresh etdim.-Simplifai-da “My Application” draft application yaradılmadı. Expected Result və Actual result üst-üstə düşmür.
+Select applications where created_at '2026-05-03T14:49:59'; Supabase-də həmin tətbiqə aid məlumat tapılmadı. Expected Result və Actual result üst-üstə düşmür.
